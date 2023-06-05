@@ -1426,6 +1426,7 @@
 			qcom,ipc = <&apcs 0 12>;
 			qcom,smd-edge = <0>;
 			qcom,remote-pid = <1>;
+			mbox-names = "mpss_smem";
 			label = "mpss";
 
 			qcom,smd-channels = "IPCRTR";
@@ -1452,6 +1453,14 @@
 
 			qcom.diag_dci_cmd {
 				qcom,smd-channels = "DIAG_2_CMD";
+			};
+
+			qcom,apr_tal_rpmsg_audio {
+				qcom,smd-channels = "apr_audio_svc";
+			};
+
+			qcom,apr_tal_rpmsg_voice {
+				qcom,smd-channels = "apr_voice_svc";
 			};
 		};
 
