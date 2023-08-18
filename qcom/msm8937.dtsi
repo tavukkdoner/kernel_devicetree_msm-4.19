@@ -1644,6 +1644,12 @@
 			qcom,smdpkt-ch-name = "DATA21";
 			qcom,smdpkt-dev-name = "smd21";
 		};
+
+		qcom,smdpkt-loopback {
+			qcom,smdpkt-edge = "modem";
+			qcom,smdpkt-ch-name = "LOOPBACK";
+			qcom,smdpkt-dev-name = "smd_pkt_loopback";
+		};
 	};
 
 	qcom_tzlog: tz-log@08600720 {
