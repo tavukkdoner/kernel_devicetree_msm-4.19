@@ -45,6 +45,10 @@
 				};
 			};
 		};
+
+		scm {
+			compatible = "qcom,scm";
+		};
 	};
 
 	memory { device_type = "memory"; reg = <0 0 0 0>; };
