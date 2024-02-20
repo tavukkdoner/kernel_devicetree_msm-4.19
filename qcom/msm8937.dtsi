@@ -47,6 +47,8 @@
 		};
 	};
 
+	memory { device_type = "memory"; reg = <0 0 0 0>; };
+
 	reserved_memory: reserved-memory {
 		#address-cells = <2>;
 		#size-cells = <2>;
