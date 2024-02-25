@@ -710,6 +710,7 @@
 	rpmcc: qcom,rpmcc {
 		compatible = "qcom,rpmcc-sdm439";
 		#clock-cells = <1>;
+		qcom,hw-clk-handoff;
 	};
 
 	gcc: qcom,gcc@1800000 {
