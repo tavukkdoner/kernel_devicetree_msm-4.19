@@ -53,6 +53,7 @@
 			#io-channel-cells = <1>;
 			io-channel-ranges;
 
+/*
 			usbin {
 				reg = <VADC_USBIN>;
 				label = "usbin";
@@ -112,6 +113,7 @@
 				label = "usb_dm";
 				qcom,pre-scaling = <1 3>;
 			};
+*/
 		};
 
 		pmi8937_mpps: mpps {
@@ -147,8 +149,8 @@
 			qcom,aicl-rerun-period-s = <180>;
 			qcom,autoadjust-vfloat;
 
-			io-channels = <&pmi8937_vadc VADC_VCHG_SNS_LEGACY>;
-			io-channel-names = "vchg_sns";
+//			io-channels = <&pmi8937_vadc VADC_VCHG_SNS_LEGACY>;
+//			io-channel-names = "vchg_sns";
 
 			qcom,chgr@1000 {
 				reg = <0x1000 0x100>;
@@ -428,8 +430,8 @@
 			qcom,headroom-sense-ch0-enabled;
 			qcom,headroom-sense-ch1-enabled;
 			qcom,pmic-revid = <&pmi8937_revid>;
-			io-channels = <&pmi8937_vadc VADC_SPARE2>;
-			io-channel-names = "die-temp";
+//			io-channels = <&pmi8937_vadc VADC_SPARE2>;
+//			io-channel-names = "die-temp";
 
 			pmi8937_flash0: qcom,flash_0 {
 				label = "flash";

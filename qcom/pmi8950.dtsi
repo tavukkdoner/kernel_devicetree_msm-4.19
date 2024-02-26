@@ -51,6 +51,7 @@
 			#io-channel-cells = <1>;
 			io-channel-ranges;
 
+/*
 			usbin {
 				reg = <VADC_USBIN>;
 				label = "usbin";
@@ -110,6 +111,7 @@
 				label = "usb_dm";
 				qcom,pre-scaling = <1 3>;
 			};
+*/
 		};
 
 		pmi8950_gpios: gpios {
@@ -161,8 +163,8 @@
 			qcom,autoadjust-vfloat;
 			dpdm-supply = <&qusb_phy>;
 
-			io-channels = <&pmi8950_vadc VADC_VCHG_SNS_LEGACY>;
-			io-channel-names = "vchg_sns";
+//			io-channels = <&pmi8950_vadc VADC_VCHG_SNS_LEGACY>;
+//			io-channel-names = "vchg_sns";
 
 			qcom,chgr@1000 {
 				reg = <0x1000 0x100>;
@@ -522,8 +524,8 @@
 			qcom,headroom-sense-ch0-enabled;
 			qcom,headroom-sense-ch1-enabled;
 			qcom,pmic-revid = <&pmi8950_revid>;
-			io-channels = <&pmi8950_vadc VADC_SPARE2>;
-			io-channel-names = "die-temp";
+//			io-channels = <&pmi8950_vadc VADC_SPARE2>;
+//			io-channel-names = "die-temp";
 
 			pmi8950_flash0: qcom,flash_0 {
 				label = "flash";
@@ -612,7 +614,7 @@
 	chg-temp-adc {
 		polling-delay-passive = <0>;
 		polling-delay = <0>;
-		thermal-sensors = <&pmi8950_vadc VADC_CHG_TEMP_LEGACY>;
+//		thermal-sensors = <&pmi8950_vadc VADC_CHG_TEMP_LEGACY>;
 		thermal-governor = "user_space";
 
 		trips {
