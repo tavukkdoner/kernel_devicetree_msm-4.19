@@ -176,6 +176,8 @@
 #include "msm8937-mdss.dtsi"
 #include "msm8937-mdss-pll.dtsi"
 
+#define wakegpio wakegic
+
 &soc {
 	#address-cells = <1>;
 	#size-cells = <1>;
@@ -212,13 +214,6 @@
 		interrupt-controller;
 		interrupt-parent = <&intc>;
 		#interrupt-cells = <3>;
-	};
-
-	wakegpio: wake-gpio {
-		compatible = "qcom,mpm-gpio";
-		interrupt-controller;
-		interrupt-parent = <&intc>;
-		#interrupt-cells = <2>;
 	};
 
 	timer {
