@@ -10,6 +10,9 @@
 			<0x500000 0x13080>;
 		reg-names = "snoc-base", "snoc-mm-base",
 			    "bimc-base", "pcnoc-base";
+		clock-names = "bus_clk", "bus_a_clk";
+		clocks = <&rpmcc BIMC_MSMBUS_CLK>,
+			<&rpmcc BIMC_MSMBUS_A_CLK>;
 
 		/*Buses*/
 		fab_bimc: fab-bimc {
