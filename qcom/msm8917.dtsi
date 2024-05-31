@@ -151,6 +151,10 @@
 		ranges = <0 0 0 0xffffffff>;
 		compatible = "simple-bus";
 	};
+
+	qcom-secure-buffer {
+		compatible = "qcom,secure-buffer";
+	};
 };
 
 #include "msm8917-pinctrl.dtsi"
