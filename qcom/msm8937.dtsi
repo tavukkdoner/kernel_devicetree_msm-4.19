@@ -45,6 +45,10 @@
 				};
 			};
 		};
+
+		scm {
+			compatible = "qcom,scm";
+		};
 	};
 
 	reserved_memory: reserved-memory {
