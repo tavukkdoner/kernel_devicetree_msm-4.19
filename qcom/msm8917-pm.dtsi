@@ -25,48 +25,48 @@
 			reg = <0>;
 			#address-cells = <1>;
 			#size-cells = <0>;
-			label = "perf";
+			idle-state-name = "perf";
 			qcom,psci-mode-shift = <4>;
 			qcom,psci-mode-mask = <0xf>;
 
 			qcom,pm-cluster-level@0 {
 				reg = <0>;
-				label = "perf-l2-wfi";
+				idle-state-name = "perf-l2-wfi";
 				qcom,psci-mode = <1>;
-				qcom,entry-latency-us = <125>;
-				qcom,exit-latency-us = <180>;
-				qcom,min-residency-us = <305>;
+				entry-latency-us = <125>;
+				exit-latency-us = <180>;
+				min-residency-us = <305>;
 			};
 
 			qcom,pm-cluster-level@1 {
 				reg = <1>;
-				label = "perf-l2-gdhs";
+				idle-state-name = "perf-l2-gdhs";
 				qcom,psci-mode = <4>;
-				qcom,entry-latency-us = <240>;
-				qcom,exit-latency-us = <280>;
-				qcom,min-residency-us = <806>;
+				entry-latency-us = <240>;
+				exit-latency-us = <280>;
+				min-residency-us = <806>;
 				qcom,min-child-idx = <1>;
 				qcom,reset-level = <LPM_RESET_LVL_GDHS>;
 			};
 
 			qcom,pm-cluster-level@2 {
 				reg = <2>;
-				label = "perf-l2-retention";
+				idle-state-name = "perf-l2-retention";
 				qcom,psci-mode = <2>;
-				qcom,entry-latency-us = <700>;
-				qcom,exit-latency-us = <650>;
-				qcom,min-residency-us = <1972>;
+				entry-latency-us = <700>;
+				exit-latency-us = <650>;
+				min-residency-us = <1972>;
 				qcom,min-child-idx = <1>;
 				qcom,reset-level = <LPM_RESET_LVL_RET>;
 			};
 
 			qcom,pm-cluster-level@3 {
 				reg = <3>;
-				label = "perf-l2-pc";
+				idle-state-name = "perf-l2-pc";
 				qcom,psci-mode = <5>;
-				qcom,entry-latency-us = <800>;
-				qcom,exit-latency-us = <11200>;
-				qcom,min-residency-us = <6501>;
+				entry-latency-us = <800>;
+				exit-latency-us = <11200>;
+				min-residency-us = <6501>;
 				qcom,min-child-idx = <1>;
 				qcom,is-reset;
 				qcom,notify-rpm;
@@ -76,26 +76,27 @@
 			qcom,pm-cpu {
 				#address-cells = <1>;
 				#size-cells = <0>;
+				reg = <0>;
 				qcom,psci-mode-shift = <0>;
 				qcom,psci-mode-mask = <0xf>;
 				qcom,cpu = <&CPU0 &CPU1 &CPU2 &CPU3>;
 
 				qcom,pm-cpu-level@0 {
 					reg = <0>;
-					label = "wfi";
+					idle-state-name = "wfi";
 					qcom,psci-cpu-mode = <1>;
-					qcom,entry-latency-us = <13>;
-					qcom,exit-latency-us = <12>;
-					qcom,min-residency-us = <25>;
+					entry-latency-us = <13>;
+					exit-latency-us = <12>;
+					min-residency-us = <25>;
 				};
 
 				qcom,pm-cpu-level@1 {
 					reg = <1>;
-					label = "pc";
+					idle-state-name = "pc";
 					qcom,psci-cpu-mode = <3>;
-					qcom,entry-latency-us = <125>;
-					qcom,exit-latency-us = <180>;
-					qcom,min-residency-us = <595>;
+					entry-latency-us = <125>;
+					exit-latency-us = <180>;
+					min-residency-us = <595>;
 					qcom,use-broadcast-timer;
 					qcom,is-reset;
 					qcom,reset-level = <LPM_RESET_LVL_PC>;
