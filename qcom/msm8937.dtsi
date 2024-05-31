@@ -1,5 +1,6 @@
 #include "skeleton64.dtsi"
 #include <dt-bindings/regulator/qcom,rpm-smd-regulator.h>
+#include <dt-bindings/regulator/qcom,rpmh-regulator-levels.h>
 #include <dt-bindings/spmi/spmi.h>
 #include <dt-bindings/interrupt-controller/arm-gic.h>
 #ifdef CONFIG_COMMON_CLK_MSM
