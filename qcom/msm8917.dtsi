@@ -629,6 +629,7 @@
 	rpmcc: qcom,rpmcc {
 		compatible = "qcom,rpmcc-qm215";
 		#clock-cells = <1>;
+		qcom,hw-clk-handoff;
 	};
 
 	gcc: qcom,gcc@1800000 {
