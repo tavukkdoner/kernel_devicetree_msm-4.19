@@ -48,7 +48,14 @@
 		};
 
 		scm {
-			compatible = "qcom,scm";
+			compatible = "qcom,scm-msm8916";
+			clocks = <&gcc GCC_CRYPTO_CLK>,
+				 <&gcc GCC_CRYPTO_AXI_CLK>,
+				 <&gcc GCC_CRYPTO_AHB_CLK>;
+			clock-names = "core", "bus", "iface";
+			#reset-cells = <1>;
+
+			qcom,dload-mode = <&tcsr 0x6100>;
 		};
 	};
 
@@ -1451,6 +1458,11 @@
 	tcsr_mutex_block: syscon@01905000 {
 		compatible = "syscon";
 		reg = <0x01905000 0x20000>;
+	};
+
+	tcsr: syscon@0x1937000 {
+		compatible = "syscon";
+		reg = <0x1937000 0x30000>;
 	};
 
 	tcsr_mutex: hwlock {
