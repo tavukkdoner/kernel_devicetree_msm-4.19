@@ -115,15 +115,12 @@
 		};
 
 		pmi8950_gpios: gpios {
-			compatible = "qcom,spmi-gpio";
-			reg = <0xc000 0x200>;
-
-			interrupts = <0x2 0xc0 0 IRQ_TYPE_NONE>,
-				<0x2 0xc1 0 IRQ_TYPE_NONE>;
-			interrupt-names = "pmi8950_gpio1", "pmi8950_gpio2";
-
+			compatible = "qcom,pmi8950-gpio";
+			reg = <0xc000>;
 			gpio-controller;
 			#gpio-cells = <2>;
+			interrupt-controller;
+			#interrupt-cells = <2>;
 		};
 
 		pmi8950_mpps: mpps {

@@ -88,19 +88,12 @@
 		};
 
 		pm8937_gpios: gpios {
-			compatible = "qcom,spmi-gpio";
-			reg = <0xc000 0x800>;
-			interrupts = <0x0 0xc0 0 IRQ_TYPE_NONE>,
-				     <0x0 0xc1 0 IRQ_TYPE_NONE>,
-				     <0x0 0xc4 0 IRQ_TYPE_NONE>,
-				     <0x0 0xc6 0 IRQ_TYPE_NONE>,
-				     <0x0 0xc7 0 IRQ_TYPE_NONE>;
-			interrupt-names = "pm8937_gpio1", "pm8937_gpio2",
-					  "pm8937_gpio5", "pmi8937_gpio7",
-					  "pm8937_gpio8";
+			compatible = "qcom,pm8937-gpio";
+			reg = <0xc000>;
 			gpio-controller;
 			#gpio-cells = <2>;
-			qcom,gpios-disallowed = <3 4 6>;
+			interrupt-controller;
+			#interrupt-cells = <2>;
 		};
 
 		pm8937_vadc: vadc@3100 {
