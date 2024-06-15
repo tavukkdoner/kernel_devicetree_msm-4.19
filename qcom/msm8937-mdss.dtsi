@@ -187,7 +187,6 @@
 			qcom,iommu-dma-addr-pool = <0x08000000 0xF8000000>;
 			qcom,secure-context-bank;
 			qcom,iommu-vmid = <0x11>; /*VMID_CP_SEC_DISPLAY*/
-			status = "disabled";
 		};
 
 		mdss_fb0: qcom,mdss_fb_primary {
