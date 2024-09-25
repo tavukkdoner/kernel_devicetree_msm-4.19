@@ -154,6 +154,7 @@
 			qcom,profile-dec {
 				qcom,codec-mask = <0xffffffff>;
 				qcom,load-busfreq-tbl =
+                                        <489600 1210000>,   /* 1080p60D   */
 					<244800 605000>,   /* 1080p30D   */
 					<216000 540000>,   /* 720p60D    */
 					<194400 484000>,   /* FWVGA120D  */
