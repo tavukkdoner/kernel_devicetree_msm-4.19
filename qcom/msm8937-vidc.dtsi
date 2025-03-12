@@ -19,7 +19,7 @@
 			<108000 108000 244800 0x0f00000c>; /* Decoder */
 		qcom,dcvs-limit =
 			<8160 30>, /* Encoder */
-			<8160 30>; /* Decoder */
+			<8636 30>; /* Decoder */
 		qcom,hfi = "venus";
 		qcom,reg-presets = <0xe0020 0x05555556>,
 			<0xe0024 0x05555556>,
